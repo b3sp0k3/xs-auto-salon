@@ -397,9 +397,9 @@ address svg {
 
 .services-grid {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 56px;
-  max-width: 1100px;
+  grid-template-columns: 1.1fr 0.95fr 0.9fr;
+  gap: 34px;
+  max-width: 1180px;
   margin: 26px auto 0;
 }
 
@@ -407,9 +407,10 @@ address svg {
   min-width: 0;
 }
 
-.marine-column {
+.marine-column,
+.motorcycle-column {
   border-left: 1px solid rgba(0, 0, 0, 0.32);
-  padding-left: 56px;
+  padding-left: 34px;
 }
 
 .service-column > h3 {
@@ -450,8 +451,9 @@ address svg {
   gap: 20px 28px;
 }
 
-.marine-column .service-list {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.marine-column .service-list,
+.motorcycle-column .service-list {
+  grid-template-columns: 1fr;
 }
 
 .service-item {
@@ -725,7 +727,8 @@ address svg {
     gap: 34px;
   }
 
-  .marine-column {
+  .marine-column,
+  .motorcycle-column {
     border-left: 0;
     padding-left: 0;
   }
