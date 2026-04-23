@@ -355,6 +355,17 @@ address svg {
   padding: 24px clamp(20px, 4vw, 42px);
 }
 
+.card-content::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  height: 112px;
+  content: "";
+  background: linear-gradient(180deg, rgba(3, 3, 3, 0), #030303 36%, #030303 100%);
+}
+
 .card-content h3 {
   position: absolute;
   width: 1px;
@@ -372,13 +383,16 @@ address svg {
   top: 0;
   left: 0;
   width: 100%;
-  height: 82px;
+  z-index: 1;
+  height: 96px;
   content: "";
-  background: linear-gradient(180deg, #030303 0%, rgba(3, 3, 3, 0.94) 58%, rgba(3, 3, 3, 0));
+  background: linear-gradient(180deg, #030303 0%, #030303 72%, rgba(3, 3, 3, 0));
 }
 
 .motorcycle-card .card-content h3 {
   position: relative;
+  z-index: 2;
+  display: inline-block;
   width: auto;
   height: auto;
   padding: 0 0 12px;
@@ -394,6 +408,7 @@ address svg {
 
 .card-content a {
   position: absolute;
+  z-index: 2;
   left: clamp(20px, 4vw, 42px);
   bottom: 24px;
   display: inline-flex;
