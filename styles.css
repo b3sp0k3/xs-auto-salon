@@ -344,6 +344,8 @@ address svg {
 
 .card-motorcycle {
   background-image: url("/public/assets/crops/motorcycle.png");
+  background-color: #030303;
+  background-size: contain;
   background-position: center bottom;
 }
 
