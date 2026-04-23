@@ -56,7 +56,7 @@ a {
   inset: 0 0 auto;
   z-index: 20;
   display: grid;
-  grid-template-columns: 210px 1fr auto;
+  grid-template-columns: 170px 1fr auto;
   align-items: start;
   gap: clamp(18px, 4vw, 58px);
   min-height: 94px;
@@ -65,7 +65,7 @@ a {
 }
 
 .brand {
-  width: 160px;
+  width: 125px;
 }
 
 .brand img {
@@ -688,13 +688,13 @@ address svg {
 
 @media (max-width: 980px) {
   .site-header {
-    grid-template-columns: 130px 1fr auto;
+    grid-template-columns: 112px 1fr auto;
     min-height: 84px;
     padding-top: 12px;
   }
 
   .brand {
-    width: 118px;
+    width: 96px;
   }
 
   .primary-nav {
@@ -759,7 +759,7 @@ address svg {
   }
 
   .brand {
-    width: 92px;
+    width: 76px;
   }
 
   .menu-toggle {
