@@ -343,7 +343,8 @@ address svg {
 }
 
 .card-motorcycle {
-  background-image: url("/public/assets/crops/motorcycle.svg");
+  background-image: url("/public/assets/crops/motorcycle.png");
+  background-position: center bottom;
 }
 
 .card-content {
@@ -364,6 +365,31 @@ address svg {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.motorcycle-card .card-content::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 82px;
+  content: "";
+  background: linear-gradient(180deg, #030303 0%, rgba(3, 3, 3, 0.94) 58%, rgba(3, 3, 3, 0));
+}
+
+.motorcycle-card .card-content h3 {
+  position: relative;
+  width: auto;
+  height: auto;
+  padding: 0 0 12px;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  border-bottom: 2px solid var(--red);
+  text-transform: uppercase;
+  font-size: 22px;
+  font-style: italic;
 }
 
 .card-content a {
