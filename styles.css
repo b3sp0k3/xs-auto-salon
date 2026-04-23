@@ -368,10 +368,26 @@ address svg {
 
 .card-content a {
   position: absolute;
-  inset: 0;
-  overflow: hidden;
-  color: transparent;
-  background: transparent;
+  left: clamp(20px, 4vw, 42px);
+  bottom: 24px;
+  display: inline-flex;
+  min-width: 172px;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  color: #fff;
+  background: var(--red);
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 900;
+  box-shadow: 0 0 0 6px var(--red);
+  transition: background 180ms ease, box-shadow 180ms ease;
+}
+
+.card-content a:hover {
+  background: #f0182f;
+  box-shadow: 0 0 0 6px #f0182f;
 }
 
 .services {
