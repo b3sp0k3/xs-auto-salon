@@ -653,6 +653,25 @@ address svg {
   color: var(--red);
 }
 
+.footer-meta {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.footer-meta span {
+  display: inline-block;
+}
+
+.footer-meta a {
+  color: #fff;
+  font-weight: 900;
+}
+
+.footer-meta a:hover {
+  color: var(--red);
+}
+
 .contact-detail {
   position: absolute;
   right: 0;
