@@ -35,7 +35,6 @@ Email: xsautosalon@gmail.com
 - Home: https://www.xsautosalon.com/
 - Services: https://www.xsautosalon.com/#services
 - Gallery: https://www.xsautosalon.com/#gallery
-- About: https://www.xsautosalon.com/#about
 - Contact: https://www.xsautosalon.com/#contact
 
 ## Preferred Summary
