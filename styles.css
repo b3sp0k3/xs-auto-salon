@@ -342,8 +342,8 @@ address svg {
   background-image: url("/public/assets/crops/boat.png");
 }
 
-.card-jetski {
-  background-image: url("/public/assets/crops/jetski.png");
+.card-motorcycle {
+  background-image: url("/public/assets/crops/motorcycle.svg");
 }
 
 .card-content {
