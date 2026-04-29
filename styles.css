@@ -321,7 +321,7 @@ address svg {
   background: #090909;
 }
 
-.vehicle-card + .vehicle-card {
+.vehicle-card+.vehicle-card {
   border-left: 1px solid rgba(255, 255, 255, 0.25);
 }
 
@@ -456,231 +456,183 @@ address svg {
 
 .services-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.95fr 0.9fr;
-  gap: 34px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px 32px;
   max-width: 1180px;
   margin: 26px auto 0;
 }
 
-.service-column {
-  min-width: 0;
-}
-
-.marine-column,
-.motorcycle-column {
-  border-left: 1px solid rgba(0, 0, 0, 0.32);
-  padding-left: 34px;
-}
-
-.service-column > h3 {
-  position: relative;
-  max-width: 330px;
-  margin: 0 auto 24px;
-  padding: 8px 18px;
-  color: #fff;
-  background: #050505;
-  text-align: center;
-  text-transform: uppercase;
-  transform: skew(-10deg);
-  font-size: 15px;
-  letter-spacing: 2px;
-}
-
-.service-column > h3::before,
-.service-column > h3::after {
-  position: absolute;
-  top: 50%;
-  width: 118px;
-  height: 1px;
-  content: "";
-  background: rgba(0, 0, 0, 0.32);
-}
-
-.service-column > h3::before {
-  right: 100%;
-}
-
-.service-column > h3::after {
-  left: 100%;
-}
-
-.service-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px 28px;
-}
-
-.marine-column .service-list,
-.motorcycle-column .service-list {
-  grid-template-columns: 1fr;
+@supports (grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))) {
+  .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .service-item {
-  display: grid;
-  grid-template-columns: 54px 1fr;
-  gap: 14px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
 }
 
-.icon-badge {
-  display: grid;
-  width: 50px;
-  height: 50px;
-  place-items: center;
-  border-radius: 50%;
+.service-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border: 2px solid var(--red);
+  border-radius: 4px;
   color: transparent;
+  flex-shrink: 0;
+  background-size: 32px 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(215, 11, 34, 0.1);
+}
+
+/* Service icon backgrounds */
+.service-icon[aria-hidden="true"]::before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
   background: var(--red);
 }
 
-.icon-badge::before {
-  display: block;
-  width: 25px;
-  height: 25px;
-  content: "";
-  background: #fff;
-  clip-path: polygon(50% 0, 88% 18%, 100% 58%, 72% 100%, 28% 100%, 0 58%, 12% 18%);
+.icon-hand-wash::before { mask-image: url("/public/assets/icons/hand-wash.svg"); }
+.icon-interior::before { mask-image: url("/public/assets/icons/interior.svg"); }
+.icon-wax::before { mask-image: url("/public/assets/icons/wax.svg"); }
+.icon-buff::before { mask-image: url("/public/assets/icons/buff.svg"); }
+.icon-ceramic::before { mask-image: url("/public/assets/icons/ceramic.svg"); }
+.icon-shampoo::before { mask-image: url("/public/assets/icons/shampoo.svg"); }
+.icon-wheels::before { mask-image: url("/public/assets/icons/wheels.svg"); }
+.icon-carpet::before { mask-image: url("/public/assets/icons/carpet.svg"); }
+
+.service-icon {
+  position: relative;
+  overflow: hidden;
 }
 
-.service-item h4 {
-  margin: 0 0 4px;
+.service-item h3 {
+  margin: 0;
   text-transform: uppercase;
   font-size: 14px;
-  line-height: 1.15;
+  line-height: 1.2;
+  letter-spacing: 1px;
 }
 
 .service-item p {
   margin: 0;
-  font-size: 14px;
-  line-height: 1.25;
+  font-size: 13px;
+  line-height: 1.35;
+  color: rgba(20, 20, 20, 0.78);
 }
 
 .why {
-  padding: 28px clamp(18px, 5vw, 96px) 36px;
+  padding: 56px clamp(18px, 5vw, 96px);
   background: #030303;
-  text-align: center;
+}
+
+.why-content {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.why-copy {
+  flex: 0 0 auto;
+  background: var(--red);
+  padding: 32px 28px;
+  min-width: 240px;
 }
 
 .why h2 {
-  font-size: clamp(22px, 3.4vw, 31px);
+  margin: 0;
+  font-size: clamp(20px, 2.8vw, 28px);
   letter-spacing: 2px;
+  line-height: 1.2;
+  color: #fff;
 }
 
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  max-width: 1110px;
-  margin: 26px auto 0;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 32px 24px;
+  flex: 1;
 }
 
-.why-grid article {
-  display: grid;
-  min-height: 110px;
-  place-items: center;
-  gap: 12px;
-  padding: 0 24px;
+.benefit-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
 }
 
-.why-grid article + article {
-  border-left: 1px solid rgba(255, 255, 255, 0.28);
-}
-
-.why-grid h3 {
+.benefit-item h3 {
   margin: 0;
-  max-width: 150px;
   text-transform: uppercase;
   font-size: 13px;
-  line-height: 1.55;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
 }
 
-.why-icon {
+.benefit-icon {
   position: relative;
-  width: 52px;
-  height: 52px;
-  border: 3px solid var(--red);
-}
-
-.why-icon.shield {
-  clip-path: polygon(50% 0, 90% 14%, 86% 68%, 50% 100%, 14% 68%, 10% 14%);
-}
-
-.why-icon.shield::after {
-  position: absolute;
-  inset: 14px 11px 18px 15px;
-  content: "";
-  border-right: 4px solid var(--red);
-  border-bottom: 4px solid var(--red);
-  transform: rotate(45deg);
-}
-
-.why-icon.car {
-  width: 64px;
-  height: 36px;
-  margin-top: 8px;
-  border-radius: 4px;
-}
-
-.why-icon.car::before {
-  position: absolute;
-  inset: -13px 11px auto 12px;
-  height: 20px;
-  content: "";
-  border: 3px solid var(--red);
-  border-bottom: 0;
-  transform: skew(-18deg);
-}
-
-.why-icon.medal {
-  border-radius: 50%;
-}
-
-.why-icon.medal::after,
-.why-icon.thumbs::after {
-  position: absolute;
-  inset: 13px;
-  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
   border: 2px solid var(--red);
+  border-radius: 4px;
+  color: transparent;
+  flex-shrink: 0;
 }
 
-.why-icon.thumbs {
-  width: 42px;
-  height: 52px;
-  border-radius: 4px;
-  transform: rotate(-8deg);
+.benefit-icon::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 28px;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background: var(--red);
 }
+
+.icon-target::before { mask-image: url("/public/assets/icons/target.svg"); }
+.icon-medal::before { mask-image: url("/public/assets/icons/medal.svg"); }
+.icon-shield::before { mask-image: url("/public/assets/icons/shield.svg"); }
+.icon-expertise::before { mask-image: url("/public/assets/icons/expertise.svg"); }
+.icon-reliable::before { mask-image: url("/public/assets/icons/reliable.svg"); }
 
 .contact {
-  position: relative;
-  display: grid;
-  grid-template-columns: 190px 1fr 280px;
-  gap: 28px;
+  display: flex;
   align-items: center;
-  min-height: 178px;
-  padding: 18px clamp(20px, 4vw, 56px);
-  overflow: hidden;
+  justify-content: space-between;
+  gap: 48px;
+  min-height: auto;
+  padding: 56px clamp(20px, 4vw, 96px);
   background: #070707;
   border-top: 1px solid rgba(255, 255, 255, 0.24);
 }
 
-.contact::before {
-  position: absolute;
-  inset: 0 auto 0 225px;
-  width: 28px;
-  content: "";
-  background: var(--red);
-  transform: skew(-18deg);
+.contact-copy {
+  flex: 1;
 }
 
 .footer-logo {
-  position: relative;
-  z-index: 1;
-  width: 145px;
+  flex: 0 0 auto;
+  width: 160px;
   height: auto;
-}
-
-.contact-copy {
-  position: relative;
-  z-index: 1;
-  text-align: center;
 }
 
 .contact h2 {
@@ -733,19 +685,7 @@ address svg {
   color: var(--red);
 }
 
-.contact-detail {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: min(34vw, 330px);
-  height: 100%;
-  background-image: url("/public/assets/crops/detailer.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.82;
-  clip-path: polygon(24% 0, 100% 0, 100% 100%, 0 100%);
-}
+
 
 @media (max-width: 980px) {
   .site-header {
@@ -911,7 +851,7 @@ address svg {
     grid-template-columns: 1fr;
   }
 
-  .vehicle-card + .vehicle-card {
+  .vehicle-card+.vehicle-card {
     border-left: 0;
     border-top: 1px solid rgba(255, 255, 255, 0.25);
   }
@@ -929,8 +869,8 @@ address svg {
     grid-template-columns: 1fr;
   }
 
-  .service-column > h3::before,
-  .service-column > h3::after {
+  .service-column>h3::before,
+  .service-column>h3::after {
     width: 44px;
   }
 
