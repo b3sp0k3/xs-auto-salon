@@ -8,6 +8,13 @@ toggle?.addEventListener("click", () => {
   toggle.setAttribute("aria-expanded", String(isOpen));
 });
 
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape" || !document.body.classList.contains("nav-open")) return;
+  document.body.classList.remove("nav-open");
+  toggle?.setAttribute("aria-expanded", "false");
+  toggle?.focus();
+});
+
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     document.body.classList.remove("nav-open");
