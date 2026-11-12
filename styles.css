@@ -822,7 +822,7 @@ address svg {
 
   .primary-nav {
     position: absolute;
-    top: 72px;
+    top: 100%;
     left: 0;
     right: 0;
     display: grid;
@@ -852,6 +852,7 @@ address svg {
 
   .header-call {
     grid-column: 2;
+    grid-row: 1;
     justify-self: end;
     min-height: 40px;
     padding: 0 18px;
