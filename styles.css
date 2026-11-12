@@ -924,14 +924,29 @@ address svg {
     width: 44px;
   }
 
+  .why-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 28px;
+  }
+
+  .why-copy {
+    min-width: 0;
+    text-align: center;
+  }
+
   .why-grid {
     grid-template-columns: 1fr;
     max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .contact {
     grid-template-columns: 1fr;
     justify-items: center;
+    flex-direction: column;
+    gap: 24px;
     padding: 24px 18px 30px;
   }
 
