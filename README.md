@@ -27,4 +27,17 @@ The Vercel deployment uses `vercel.json` to run the build and serve `dist/`.
    - Output directory: `dist`
 4. Deploy.
 
-No backend, environment variables, or paid services are required.
+The appointment-request form uses a Vercel Node.js function at `/api/appointment-request`.
+
+## Appointment Request Delivery Setup
+
+The form intentionally reports itself unavailable and does not claim a request was sent until all delivery and spam-protection settings are present. For review deployments, add these as Vercel **Preview** environment variables (keep production unchanged until separately approved):
+
+- `RESEND_API_KEY` — a Resend API key with permission to send mail.
+- `RESEND_FROM_EMAIL` — a sender address on a domain verified with Resend.
+- `TURNSTILE_SITE_KEY` — the public Cloudflare Turnstile site key.
+- `TURNSTILE_SECRET_KEY` — the matching Turnstile secret.
+
+Configure the Turnstile widget to allow the exact review-preview hostname and, when separately approved, `xsautosalon.com` and `www.xsautosalon.com`. The request function verifies the token server-side and emails `xsautosalon@gmail.com` through Resend. Until these settings are supplied, the form stays safely unavailable and directs visitors to the salon's phone and email links. No request is stored by the website; optional photos are attached directly to the email.
+
+The repository's automated checks mock delivery calls and never send a test email.
