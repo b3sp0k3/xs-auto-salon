@@ -141,6 +141,11 @@ a {
   letter-spacing: 1px;
 }
 
+/* The angled clip-path would hide the focus ring, so drop it while focused. */
+.header-call:focus-visible {
+  clip-path: none;
+}
+
 .header-call svg,
 .btn svg,
 address svg {
@@ -271,7 +276,7 @@ address svg {
 }
 
 .btn-primary:hover {
-  background: #f0182f;
+  background: var(--red-dark);
 }
 
 .btn-outline {
@@ -324,6 +329,11 @@ address svg {
   color: #f3f3f3;
   font-size: clamp(17px, 2.4vw, 24px);
   letter-spacing: 2px;
+}
+
+/* The services section sits on a light background; keep its heading readable. */
+.services .section-kicker h2 {
+  color: var(--ink);
 }
 
 .service-cards {
@@ -448,8 +458,8 @@ address svg {
 }
 
 .card-content a:hover {
-  background: #f0182f;
-  box-shadow: 0 0 0 6px #f0182f;
+  background: var(--red-dark);
+  box-shadow: 0 0 0 6px var(--red-dark);
 }
 
 .services {
@@ -999,5 +1009,12 @@ address svg {
   .icon-badge {
     width: 44px;
     height: 44px;
+  }
+}
+
+@media (max-width: 760px) {
+  /* Mobile header is about 96px tall; keep anchored headings clear of it. */
+  .section-anchor {
+    scroll-margin-top: 108px;
   }
 }
