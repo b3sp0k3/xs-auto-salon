@@ -670,13 +670,14 @@ address {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px 36px;
+  gap: 0 36px;
   font-style: normal;
 }
 
 address a {
   display: inline-flex;
   align-items: center;
+  min-height: 44px;
   gap: 10px;
   font-size: 15px;
 }
@@ -961,7 +962,7 @@ address svg {
   address {
     display: grid;
     justify-items: center;
-    gap: 14px;
+    gap: 0;
   }
 }
 
