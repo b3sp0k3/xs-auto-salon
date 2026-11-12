@@ -17,6 +17,25 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+  }
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
 body {
   margin: 0;
   color: #fff;
@@ -811,11 +830,14 @@ address svg {
     border-top: 1px solid rgba(255, 255, 255, 0.14);
     background: rgba(0, 0, 0, 0.96);
     transform: translateY(-130%);
-    transition: transform 180ms ease;
+    visibility: hidden;
+    transition: transform 180ms ease, visibility 0s linear 180ms;
   }
 
   .nav-open .primary-nav {
     transform: translateY(0);
+    visibility: visible;
+    transition: transform 180ms ease, visibility 0s;
   }
 
   .primary-nav a {
