@@ -43,10 +43,21 @@
         "image": "https://www.xsautosalon.com/public/assets/crops/hero-car.png",
         "telephone": "+14016991133",
         "email": "xsautosalon@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "133 Webster St",
+          "addressLocality": "Pawtucket",
+          "addressRegion": "RI",
+          "postalCode": "02861",
+          "addressCountry": "US"
+        },
         "description": "Professional auto, marine, and motorcycle detailing services for cars, boats, jet skis, and bikes.",
         "priceRange": "$$",
         "areaServed": "United States",
-        "sameAs": ["https://www.xsautosalon.com/"],
+        "sameAs": [
+          "https://www.xsautosalon.com/",
+          "https://www.facebook.com/p/Xs-Auto-Salon-LLC-61588940095006/"
+        ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Auto, Marine, and Motorcycle Detailing Services",
@@ -114,14 +125,14 @@
     <section id="home" class="hero section-anchor">
       <div class="hero-copy">
         <p class="eyebrow">Professional</p>
-        <h1><span>Auto</span>, <span>Marine</span> &amp; <span>Motorcycle</span> Detailing</h1>
+        <h1><span>Auto</span>, <span>Marine&nbsp;&amp;</span> <span>Motorcycle</span> Detailing</h1>
         <p class="hero-tag">Cars. Boats. Jet Skis. Motorcycles.<br />Clean. <strong>Restore.</strong> Protect.</p>
         <p class="hero-text">
           X's Auto Salon, LLC provides premium detailing services that restore, protect, and maintain your vehicle,
           motorcycle, or watercraft inside and out.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">Book Your Detail</a>
+          <button class="btn btn-primary" type="button" data-open-appointment aria-haspopup="dialog">Book Your Detail</button>
           <a class="btn btn-outline" href="tel:4016991133">
             <svg aria-hidden="true" viewBox="0 0 24 24">
               <path
@@ -142,27 +153,30 @@
       </div>
       <div class="service-cards">
         <article class="vehicle-card">
-          <div class="card-image card-auto asset-window" role="img"
-            aria-label="Detailed red performance car front view"></div>
-          <div class="card-content">
+          <div class="card-image card-auto">
+            <img src="/public/assets/crops/auto.png" alt="Detailed red performance car front view" width="340" height="230" />
             <h3>Autos</h3>
-            <a href="#services" aria-label="View auto detailing services">Detail Your Ride</a>
+          </div>
+          <div class="card-content">
+            <a href="#services">Detail Your Ride<span class="sr-only"> – auto detailing services</span></a>
           </div>
         </article>
         <article class="vehicle-card">
-          <div class="card-image card-boat asset-window" role="img"
-            aria-label="Detailed white and red boat on a trailer"></div>
-          <div class="card-content">
+          <div class="card-image card-boat">
+            <img src="/public/assets/crops/boat.png" alt="Detailed white and red boat on a trailer" width="340" height="230" />
             <h3>Boats</h3>
-            <a href="#services" aria-label="View boat detailing services">Marine Services</a>
+          </div>
+          <div class="card-content">
+            <a href="#services">Marine Services<span class="sr-only"> – boat detailing services</span></a>
           </div>
         </article>
         <article class="vehicle-card motorcycle-card">
-          <div class="card-image card-motorcycle asset-window" role="img"
-            aria-label="Red and black sport motorcycle with glossy finish"></div>
-          <div class="card-content">
+          <div class="card-image card-motorcycle">
+            <img src="/public/assets/crops/motorcycle.png" alt="Red and black sport motorcycle with glossy finish" width="340" height="230" />
             <h3>Motorcycles</h3>
-            <a href="#services" aria-label="View motorcycle detailing services">Motorcycle Services</a>
+          </div>
+          <div class="card-content">
+            <a href="#services">Motorcycle Services<span class="sr-only"> – motorcycle detailing services</span></a>
           </div>
         </article>
       </div>
@@ -202,17 +216,17 @@
           <p>Long-lasting protection with enhanced water beading and ease of maintenance.</p>
         </article>
         <article class="service-item">
-          <div class="service-icon icon-shampoo" aria-hidden="true"></div>
-          <h3>Wet Shampooing</h3>
-          <p>Advanced paint correction for deeper refinements and smoother finish.</p>
+          <div class="service-icon icon-sanding" aria-hidden="true"></div>
+          <h3>Wet Sanding</h3>
+          <p>Advanced paint correction for deeper refinements and a smoother finish.</p>
         </article>
         <article class="service-item">
           <div class="service-icon icon-wheels" aria-hidden="true"></div>
-          <h3>Wheels &amp; Tire Detailing</h3>
+          <h3>Wheel &amp; Tire Detailing</h3>
           <p>Deep clean and protect wheels, rims, tires, and trim.</p>
         </article>
         <article class="service-item">
-          <div class="service-icon icon-carpet" aria-hidden="true"></div>
+          <div class="service-icon icon-extractor" aria-hidden="true"></div>
           <h3>Carpet &amp; Upholstery Shampoo</h3>
           <p>Removes dirt, stains, and odors for a cleaner interior.</p>
         </article>
@@ -226,19 +240,19 @@
         </div>
         <div class="why-grid">
           <article class="benefit-item">
-            <span class="benefit-icon icon-target" aria-hidden="true"></span>
+            <span class="benefit-icon icon-detail-focus" aria-hidden="true"></span>
             <h3>Detail-Focused Service</h3>
           </article>
           <article class="benefit-item">
-            <span class="benefit-icon icon-medal" aria-hidden="true"></span>
+            <span class="benefit-icon icon-quality" aria-hidden="true"></span>
             <h3>Quality Results</h3>
           </article>
           <article class="benefit-item">
-            <span class="benefit-icon icon-shield" aria-hidden="true"></span>
-            <h3>Protection Driven Care</h3>
+            <span class="benefit-icon icon-protection" aria-hidden="true"></span>
+            <h3>Protection-Driven Care</h3>
           </article>
           <article class="benefit-item">
-            <span class="benefit-icon icon-expertise" aria-hidden="true"></span>
+            <span class="benefit-icon icon-auto-marine" aria-hidden="true"></span>
             <h3>Auto &amp; Marine Expertise</h3>
           </article>
           <article class="benefit-item">
@@ -254,6 +268,8 @@
         <h2 id="contact-title">Book Your <em>Detail</em> Today</h2>
         <p>Whether you need a quick refresh or a complete detail, we're ready to clean, restore, and protect what you
           drive.</p>
+        <p class="booking-note">Send an appointment request and we’ll confirm availability with you. A request does not book an appointment.</p>
+        <button class="btn btn-primary contact-booking-button" type="button" data-open-appointment aria-haspopup="dialog">Request an Appointment</button>
         <address>
           <a href="tel:4016991133">
             <svg aria-hidden="true" viewBox="0 0 24 24">
@@ -269,7 +285,30 @@
             </svg>
             xsautosalon@gmail.com
           </a>
-          <a href="https://www.xsautosalon.com" target="_blank" rel="noreferrer">
+          <a href="https://www.google.com/maps/search/?api=1&query=133+Webster+St+Pawtucket+RI+02861" target="_blank"
+            rel="noopener noreferrer" aria-label="Get directions to 133 Webster St, Pawtucket, RI 02861 (opens in a new tab)">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path
+                d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z" />
+            </svg>
+            133 Webster St, Pawtucket, RI 02861
+          </a>
+          <a href="https://share.google/bFydPQtrH1QCNInQB" target="_blank" rel="noopener noreferrer"
+            aria-label="Read our Google reviews (opens in a new tab)">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M12 17.3 6.2 21l1.5-6.6L2.5 9.9l6.8-.6L12 3l2.7 6.3 6.8.6-5.2 4.5 1.5 6.6L12 17.3Z" />
+            </svg>
+            Read our Google reviews
+          </a>
+          <a class="contact-social" href="https://www.facebook.com/p/Xs-Auto-Salon-LLC-61588940095006/" target="_blank" rel="noopener noreferrer"
+            aria-label="Visit X's Auto Salon on Facebook (opens in a new tab)">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path
+                d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.8-4.7 4.55-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.5 0-1.97.93-1.97 1.89v2.26h3.35l-.54 3.49h-2.81V24C19.61 23.1 24 18.1 24 12.07Z" />
+            </svg>
+            Follow us on Facebook
+          </a>
+          <a href="https://www.xsautosalon.com/">
             <svg aria-hidden="true" viewBox="0 0 24 24">
               <path
                 d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 6h-3a15.7 15.7 0 0 0-1.4-3.1A8.1 8.1 0 0 1 18.9 8ZM12 4.1c.8 1.1 1.4 2.4 1.8 3.9h-3.6c.4-1.5 1-2.8 1.8-3.9ZM4.3 14a8.3 8.3 0 0 1 0-4h3.4a17.2 17.2 0 0 0 0 4H4.3Zm.8 2h3a15.7 15.7 0 0 0 1.4 3.1A8.1 8.1 0 0 1 5.1 16Zm3-8h-3a8.1 8.1 0 0 1 4.4-3.1A15.7 15.7 0 0 0 8.1 8ZM12 19.9a12.2 12.2 0 0 1-1.8-3.9h3.6a12.2 12.2 0 0 1-1.8 3.9ZM14.2 14H9.8a14.8 14.8 0 0 1 0-4h4.4a14.8 14.8 0 0 1 0 4Zm.3 5.1a15.7 15.7 0 0 0 1.4-3.1h3a8.1 8.1 0 0 1-4.4 3.1ZM16.3 14a17.2 17.2 0 0 0 0-4h3.4a8.3 8.3 0 0 1 0 4h-3.4Z" />
@@ -281,6 +320,96 @@
       <img class="footer-logo" src="/public/assets/logo-white-512.png" alt="X's Auto Salon, LLC logo" />
     </section>
   </main>
+
+  <dialog class="appointment-dialog" id="appointment-dialog" aria-labelledby="appointment-title">
+    <div class="appointment-dialog-header">
+      <div>
+        <p class="appointment-eyebrow">Appointment request</p>
+        <h2 id="appointment-title">Tell Us About Your Detail</h2>
+        <p class="appointment-intro">Share a few details and the salon will contact you to confirm availability.</p>
+      </div>
+      <button class="dialog-close" type="button" data-close-appointment aria-label="Close appointment request">&times;</button>
+    </div>
+    <p class="appointment-confirmation-note">This sends a request only. Your appointment is not booked until X's Auto Salon confirms it with you.</p>
+    <p class="appointment-status" id="appointment-status" role="status" aria-live="polite">Checking secure request setup…</p>
+    <p class="appointment-fallback" id="appointment-fallback" hidden>
+      Online requests are not connected yet. Please <a href="tel:4016991133">call 401.699.1133</a> or
+      <a href="mailto:xsautosalon@gmail.com">email xsautosalon@gmail.com</a> instead.
+    </p>
+
+    <form class="appointment-form" id="appointment-form" novalidate>
+      <div class="form-grid">
+        <div class="form-field form-field-wide">
+          <label for="request-name">Name <span aria-hidden="true">*</span></label>
+          <input id="request-name" name="name" type="text" autocomplete="name" maxlength="100" required />
+        </div>
+        <div class="form-field">
+          <label for="request-email">Email</label>
+          <input id="request-email" name="email" type="email" autocomplete="email" maxlength="254" aria-describedby="request-contact-help" />
+        </div>
+        <div class="form-field">
+          <label for="request-phone">Phone</label>
+          <input id="request-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="30" aria-describedby="request-contact-help" />
+        </div>
+        <p class="form-help form-field-wide" id="request-contact-help">Provide at least one way for us to reach you: email or phone.</p>
+        <div class="form-field">
+          <label for="request-vehicle">Vehicle or watercraft type <span aria-hidden="true">*</span></label>
+          <select id="request-vehicle" name="vehicleType" required>
+            <option value="">Select a type</option>
+            <option value="Car">Car</option>
+            <option value="Truck or SUV">Truck or SUV</option>
+            <option value="Boat">Boat</option>
+            <option value="Jet ski">Jet ski</option>
+            <option value="Motorcycle">Motorcycle</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="request-vehicle-details">Year, make, or model <span class="optional">(optional)</span></label>
+          <input id="request-vehicle-details" name="vehicleDetails" type="text" maxlength="120" autocomplete="off" />
+        </div>
+        <div class="form-field form-field-wide">
+          <label for="request-service">Service <span aria-hidden="true">*</span></label>
+          <select id="request-service" name="service" required>
+            <option value="">Select a service</option>
+            <option>Exterior hand wash</option>
+            <option>Interior detailing</option>
+            <option>Wax &amp; paint protection</option>
+            <option>Buff &amp; polish</option>
+            <option>Ceramic coating</option>
+            <option>Wet sanding</option>
+            <option>Wheel &amp; tire detailing</option>
+            <option>Carpet &amp; upholstery shampoo</option>
+            <option>Marine detailing</option>
+            <option>Motorcycle detailing</option>
+            <option>Not sure — please advise</option>
+          </select>
+        </div>
+        <div class="form-field form-field-wide">
+          <label for="request-date">Preferred date <span class="optional">(optional)</span></label>
+          <input id="request-date" name="preferredDate" type="date" />
+          <span class="form-help">Leave blank if your dates are flexible.</span>
+        </div>
+        <div class="form-field form-field-wide">
+          <label for="request-notes">Notes <span class="optional">(optional)</span></label>
+          <textarea id="request-notes" name="notes" rows="4" maxlength="2000" placeholder="Anything else we should know about the vehicle or service?"></textarea>
+        </div>
+        <div class="form-field form-field-wide">
+          <label for="request-photos">Photos <span class="optional">(optional)</span></label>
+          <input id="request-photos" name="photos" type="file" accept="image/jpeg,image/png,image/webp" multiple aria-describedby="request-photo-help" />
+          <span class="form-help" id="request-photo-help">Up to 3 JPG, PNG, or WebP photos; 1 MB each, 2 MB total. Photos are emailed with your request and are not stored on this website.</span>
+        </div>
+      </div>
+      <div class="form-trap" aria-hidden="true">
+        <label>Leave this field empty<input name="website" type="text" tabindex="-1" autocomplete="off" /></label>
+      </div>
+      <div id="turnstile-widget" class="turnstile-widget" aria-label="Spam protection challenge"></div>
+      <div class="appointment-form-actions">
+        <button class="btn btn-primary appointment-submit" id="appointment-submit" type="submit" disabled>Send Request</button>
+        <p class="form-help">We’ll email your request to the salon. An appointment is only confirmed after the salon replies.</p>
+      </div>
+    </form>
+  </dialog>
 
   <script src="/script.js"></script>
 </body>
